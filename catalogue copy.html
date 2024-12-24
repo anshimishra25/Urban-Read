@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>AdminHub</title>
+</head>
+
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">Urban Read</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="Dashboard.html">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">Catalogue</span>
+				</a>
+			</li>
+			<li>
+				<a href="profilePage.html">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Profile</span>
+				</a>
+			</li>
+
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell'></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/OIP.jpeg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Catalogue</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<ul class="box-info">
+
+				<li>
+					<img src="img/harrypotter.jpeg" style="width: 10%;" alt="">
+					<span class="text">
+						<h3>Harry Potter and the Sorcerer's Stone</h3>
+						<p>Recommendation</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-notification'></i>
+					<span class="text">
+						<h3>Note:</h3>
+						<p>
+							1. Book Should Be Returned within 7 working days
+							<br>
+							2. You Should Verify Yourself before Issue of Book
+						</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Books</th>
+								<th>Author</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="img/harrypotter.jpeg">
+									<p>Harry Potter and the sorcerer's stone</p>
+								</td>
+								<td>J. K. Rowling</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'Harry Potter and the Sorcerer\'s Stone', 'J. K. Rowling', 'img/harrypotter.jpeg')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/theartof =doing.png">
+									<p>The Art Of Doing Science and Engineering</p>
+								</td>
+								<td>Richard W. Hamming</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'The Art Of Doing Science and Engineering', 'Richard W. Hamming', 'img/theartof =doing.png')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/theexistentialpelasure.png">
+									<p>The Existential Pleasures Of Engineering</p>
+								</td>
+								<td>Samuel C. Florman</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'The Existential Pleasures Of Engineering', 'Samuel C. Florman', 'img/theexistentialpelasure.png')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/mechanical.png">
+									<p>The Mechanical Design</p>
+								</td>
+								<td>Richard G. Budynas <br>
+									J. Keith Nisbeth</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'The Mechanical Design', 'JRichard G. Budynas', 'img/mechanical.png')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/java.jpg">
+									<p>Java: A Beginner’s Guide</p>
+								</td>
+								<td>Herbert Schildt</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'Java: A Beginner’s Guide', 'Herbert Schildt', 'img/java.jpg')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/electrical.jpg">
+									<p>Power System Analysis and Design</p>
+								</td>
+								<td>J Duncan Glover <br>
+									Thomas J. Overbye <br>
+									Mulukutla S. Sarma</td>
+								<td>
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'Power System Analysis and Design', 'J Duncan Glover', 'img/electrical.jpg')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/novel-1.jpg">
+									<p> The Pilgrim’s Progress by John Bunyan (1678)</p>
+								</td>
+								<td>John Bunyan</td>
+								<td>
+
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'The Pilgrim\’s Progress by John Bunyan (1678)', 'John Bunyan', 'img/novel-1.jpg')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/novel-2.jpg">
+									<p> Sybil by Benjamin Disraeli (1845)</p>
+								</td>
+								<td>Benjamin Disraeli</td>
+								<td>
+
+									<a style="cursor: pointer;"
+										onclick="changeStatus(this, 'Sybil by Benjamin Disraeli (1845)', 'Benjamin Disraeli', 'img/novel-2.jpg')">
+										<span class="status pending">Issue</span>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<script>
+						function changeStatus(link, title, author, image) {
+							var statusSpan = link.querySelector('.status');
+							if (statusSpan.textContent === 'Issue') {
+								statusSpan.textContent = 'Add to Library';
+								statusSpan.classList.remove('pending');
+								statusSpan.classList.add('completed');
+							} else if (statusSpan.textContent === 'Add to Library') {
+								// Encode book details as a query parameter
+								var encodedDetails = encodeURIComponent(JSON.stringify({ title, author, image }));
+
+								// Open a new webpage with the same page and all its details
+								window.open('details.html?details=' + encodedDetails, '_blank');
+							}
+							// You can also add additional logic or actions here if needed.
+						}
+					</script>
+				</div>
+
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
